@@ -11,37 +11,37 @@ ${wrong_email}    dwy11302@eoopy
 ${wrong_password}     1234qwe
 
 *** Test Cases ***
-#LoginTest
-#    Open my Browser    ${url}    ${browser}
-#    Click Login
-#    Enter Email     ${email}
-#    Enter Password  ${password}
-#    Click Submit
-#    Verify Succesfull Login
-#    Close my Browser
-#
-#Empty LoginTest
-#    Open my Browser    ${url}    ${browser}
-#    Click Login
-#
-#    Enter Email     ${email}
-#    Click Submit
-#    Verify Alert For Empty Password
-#    reload page
-#
-#    Enter Password   ${password}
-#    Click Submit
-#    Verify Alert For Empty Email
-#    reload page
-#
-#    Click Submit
-#    Verify Alert For Empty Email
-#    Verify Alert For Empty Password
-#
-#    Close my Browser
+LoginTest
+    Open My Browser    ${url}    ${browser}
+    Click Login
+    Enter Email     ${email}
+    Enter Password  ${password}
+    Click Submit
+    Verify Succesfull Login
+    Close My Browser
+
+Empty LoginTest
+    Open My Browser    ${url}    ${browser}
+    Click Login
+
+    Enter Email     ${email}
+    Click Submit
+    Verify Alert For Empty Password
+    reload page     #clear textfields
+
+    Enter Password   ${password}
+    Click Submit
+    Verify Alert For Empty Email
+    reload page     #clear textfields
+
+    Click Submit
+    Verify Alert For Empty Email
+    Verify Alert For Empty Password
+
+    Close My Browser
 
 Wrong LoginTest
-    Open my Browser    ${url}    ${browser}
+    Open My Browser    ${url}    ${browser}
     Click Login
 
     Enter Email     ${wrong_email}
@@ -59,4 +59,4 @@ Wrong LoginTest
     Click Submit
     Verify Alert For Wrong Email And Password
 
-    Close my Browser
+    Close My Browser

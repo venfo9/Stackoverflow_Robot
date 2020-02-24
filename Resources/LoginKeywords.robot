@@ -4,7 +4,7 @@ Variables  ../PageObjects/Locators.py
 
 
 *** Keywords ***
-Open my Browser
+Open My Browser
     [Arguments]  ${Url}     ${Browser}
     open browser  ${Url}    ${Browser}
 
@@ -58,7 +58,7 @@ Verify Alert For Wrong Email And Password
     should be equal     ${txt_wrong_email}     Указанный адрес не является действительным адресом электронной почты.
     log to console  ${txt_wrong_email}
 
-Close my Browser
+Close My Browser
     close all browsers
 
 
